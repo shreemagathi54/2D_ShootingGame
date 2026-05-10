@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="shootinggame" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/shootinggame" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="C:/SDL2/SDL2_ttf-2.24.0/x86_64-w64-mingw32/include" />
+					<Add directory="C:/SDL2/SDL2-2.32.10/x86_64-w64-mingw32/include" />
+				</Compiler>
+				<Linker>
+					<Add library="SDL2_ttf.dll" />
+					<Add directory="C:/SDL2/SDL2-2.32.10/x86_64-w64-mingw32/lib" />
+					<Add directory="C:/SDL2/SDL2_ttf-2.24.0/x86_64-w64-mingw32/lib" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/shootinggame" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add directory="C:/SDL2/SDL2-2.32.10/x86_64-w64-mingw32/include" />
+			<Add directory="C:/SDL2/SDL2_ttf-2.24.0/x86_64-w64-mingw32/include" />
+			<Add directory="C:/SDL2/SDL2_mixer-2.8.1/x86_64-w64-mingw32/include" />
+		</Compiler>
+		<Linker>
+			<Add library="mingw32" />
+			<Add library="SDL2main" />
+			<Add library="SDL2" />
+			<Add library="SDL2_ttf" />
+			<Add library="SDL2_mixer" />
+			<Add library="user32" />
+			<Add library="gdi32" />
+			<Add library="winmm" />
+			<Add library="dxguid" />
+			<Add directory="C:/SDL2/SDL2-2.32.10/x86_64-w64-mingw32/lib" />
+			<Add directory="C:/SDL2/SDL2_ttf-2.24.0/x86_64-w64-mingw32/lib" />
+			<Add directory="C:/SDL2/SDL2_mixer-2.8.1/x86_64-w64-mingw32/lib" />
+		</Linker>
+		<ExtraCommands>
+			<Add after="XCOPY $(#sdl2)\bin\*.dll $(TARGET_OUTPUT_DIR) /D /Y" />
+		</ExtraCommands>
+		<Unit filename="Background.cpp" />
+		<Unit filename="Background.h" />
+		<Unit filename="Enemy.cpp" />
+		<Unit filename="Enemy.h" />
+		<Unit filename="EnemyManager.cpp" />
+		<Unit filename="EnemyManager.h" />
+		<Unit filename="FastEnemy.h" />
+		<Unit filename="README_1.md" />
+		<Unit filename="SlowEnemy.h" />
+		<Unit filename="arialceb.ttf" />
+		<Unit filename="blue.bmp" />
+		<Unit filename="bullet.cpp" />
+		<Unit filename="bullet.h" />
+		<Unit filename="explosion.wav" />
+		<Unit filename="gameover.wav" />
+		<Unit filename="green.bmp" />
+		<Unit filename="main.cpp" />
+		<Unit filename="orange.bmp" />
+		<Unit filename="player.cpp" />
+		<Unit filename="player.h" />
+		<Unit filename="purple.bmp" />
+		<Unit filename="red.bmp" />
+		<Unit filename="shoot.wav" />
+		<Unit filename="shooter.bmp" />
+		<Extensions />
+	</Project>
+</CodeBlocks_project_file>
