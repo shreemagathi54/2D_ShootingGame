@@ -242,7 +242,7 @@ the highest score is tracked across sessions.
 
 ##  Credits
 
-Developed by **Shree Magathi k ** and **S Aswini ** as a C++ SDL2 project.
+Developed by **Shree Magathi k** and **S Aswini** as a C++ SDL2 project.
 
 ##  Gameplay Preview
 ![Alien Shooter Demo](gameoutput.gif)
