@@ -50,6 +50,9 @@ shootinggame/
 │   ├── orange.bmp                  ← Enemy sprite
 │   ├── blue.bmp                    ← Enemy sprite
 │   ├── purple.bmp                  ← Enemy sprite
+│   ├── explosion.wav               ← sound effect
+│   ├── shoot.wav                   ← sound effect
+│   ├── gameover.wav                ← sound effect
 │   └── arialceb.ttf                ← Font for score/game over screen
 ```
 
@@ -78,7 +81,7 @@ shootinggame/
 
 ---
 
-### Step 3 — Install SDL2_ttf (for fonts and text)
+### Step 3 — Install SDL2_ttf (for fonts and text) 
 
 1. Go to: https://github.com/libsdl-org/SDL_ttf/releases
 2. Download: `SDL2_ttf-2.x.x-win32-x64.zip`
@@ -87,7 +90,15 @@ shootinggame/
 
 ---
 
-### Step 4 — Configure Code::Blocks
+### Step 4 — Install SDL2_mixer (for sound effects)
+1. Go to: https://github.com/libsdl-org/SDL_mixer/releases
+2. Download: `SDL2_mixer-2.x.x-win32-x64.zip`
+3. Extract it to `C:\SDL2\SDL2_mixer-2.x.x\`
+4. Copy `SDL2_mixer.dll` into your project's `bin\Debug\` folder
+
+---
+
+### Step 5 — Configure Code::Blocks
 
 Open **Project → Build Options** and follow these steps:
 
@@ -95,12 +106,14 @@ Open **Project → Build Options** and follow these steps:
 ```
 C:\SDL2\SDL2-2.x.x\x86_64-w64-mingw32\include
 C:\SDL2\SDL2_ttf-2.x.x\x86_64-w64-mingw32\include
+C:\SDL2\SDL2_mixer-2.x.x\x86_64-w64-mingw32\include
 ```
 
 #### Linker Search Directories (Search directories → Linker tab):
 ```
 C:\SDL2\SDL2-2.x.x\x86_64-w64-mingw32\lib
 C:\SDL2\SDL2_ttf-2.x.x\x86_64-w64-mingw32\lib
+C:\SDL2\SDL2_mixer-2.x.x\x86_64-w64-mingw32\lib
 ```
 
 #### Link Libraries (Linker settings → Link libraries):
@@ -109,6 +122,7 @@ mingw32
 SDL2main
 SDL2.dll
 SDL2_ttf
+SDL2_mixer
 user32
 gdi32
 winmm
@@ -118,16 +132,17 @@ dxguid
 
 ---
 
-### Step 5 — Add Asset Files
+### Step 6 — Add Asset Files
 
 Copy the following files into your project's `bin\Debug\` folder:
 - `shooter.bmp`
 - `red.bmp`, `green.bmp`, `orange.bmp`, `blue.bmp`, `purple.bmp`
 - `arialceb.ttf`
+- `shoot.wav`,`explosion.wav`,`gameover.wav`
 
 ---
 
-### Step 6 — Build and Run
+### Step 7 — Build and Run
 
 1. Open the project in Code::Blocks
 2. Click **Build → Clean**
@@ -145,6 +160,7 @@ Copy the following files into your project's `bin\Debug\` folder:
 -  Collision detection — bullet destroys enemy on hit
 -  Score tracking with high score saved to file
 -  Game Over screen with restart or exit option
+-  Sound effects for shooter,explosion and for the gameover screen
 
 ---
 
@@ -165,10 +181,10 @@ Player handles movement and fires multiple Bullet objects simultaneously.
 Enemies spawn from the right side of the screen in columns of four
 and move towards the left. The player controls a spaceship on the
 left side and must shoot down the enemies before they cross the screen.
-Three types of enemies appear randomly — normal enemies move in a
+five types of enemies appear randomly — normal enemies move in a
 straight line, slow enemies wobble up and down, and fast enemies
 zigzag rapidly making them harder to hit. The game ends when any
-enemy reaches the left edge of the screen. Your score is saved and
+enemy reaches the left edge of the screen or. Your score is saved and
 the highest score is tracked across sessions.
 
 ---
