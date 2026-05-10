@@ -230,4 +230,4 @@ Developed by **Shree Magathi k (25PD31)** and **S Aswini(25PD23)** as a C++ SDL2
 
 ##  Gameplay Preview
 
-![Alien Shooter Demo](gameoutput.gif)
+                                       ![Alien Shooter Demo](gameoutput.gif)
