@@ -21,7 +21,6 @@ Move your spaceship, shoot bullets, and destroy incoming alien enemies — inclu
 
 | Enemy       | Speed | Movement Pattern         | Size  |
 |-------------|-------|--------------------------|-------|
-| Normal      | 200   | Straight left            | 80×80 |
 | SlowEnemy   | 60    | Slow + gentle wobble     | 70×70 |
 | FastEnemy   | 220   | Fast + sharp zigzag      | 70×70 |
 
