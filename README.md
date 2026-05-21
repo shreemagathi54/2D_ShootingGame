@@ -204,7 +204,7 @@ the highest score is tracked across sessions.
 ##  Technical Details
 
 - **Language:** C++
-- **Framework:** SDL2, SDL2_ttf
+- **Framework:** SDL2, SDL2_ttf, SDL2_mixer
 - **IDE:** Code::Blocks with MinGW
 - **Platform:** Windows
 - **Architecture:** Object Oriented — each game element is its own class
