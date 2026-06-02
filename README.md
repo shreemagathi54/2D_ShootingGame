@@ -215,14 +215,12 @@ the highest score is tracked across sessions.
 
 - Only Windows is supported currently
 - BMP format only for sprites (no PNG/JPG support without SDL_image)
-- No sound effects
 - Player cannot move left or right, only up and down
 
 ---
 
 ##  Future Improvements
 
--  Sound effects and background music using SDL_mixer
 -  Multiple lives and a health bar for the player
 -  Increasing difficulty with each level
 -  Enemies that shoot back at the player
